@@ -426,3 +426,32 @@ Office_33 <- "Nordwand"
 ex() %>% check_code(c(Office_33 <- "Nordwand", "Nordwand"-> Office_33), fixed=TRUE, missing_msg= "Da haben Sie etwas nicht richtig zugewisen. Verweisen Sie auf die Variable Office_33 den neuen Namen")
 success_msg("Super - weiter geht´s, wir haben keine Zeit zu verlieren!")
 ```
+
+---
+
+## Vektoren
+
+```yaml
+type: TabExercise
+key: 877cc6666f
+xp: 100
+```
+
+Ein Vektor ist die einfachste Datenstruktur in R. Als "einzelnes Objekt, das aus einer Ansammlung von Daten besteht" wird ein Vektor im R-Handbuch definiert. Wir behandeln in dieser Einheit zum Einstieg nur numerische Vektoren, also Vektoren, die alle Arten von Zahlen enthalten können (de Vries/Meys 2018).
+
+Um einen Vektor mit einer Folge von Zahlen von 1 bis 3 zu erzeugen:  
+```
+c(1,2,3) oder kürzer c(1:3)
+```
+
+Wichtige Befehle:
+
+**str()**: Typ eines Vektors bestimmen und Überblick verschaffen.
+
+**mean()**: Durchschnitt ausrechnen.
+
+`@pre_exercise_code`
+```{r}
+sell.time <- c(8,8,8,8,9,6)
+revenue.day <- c(2700, 3500, 4200, 4700, 5103, 3300)
+```
