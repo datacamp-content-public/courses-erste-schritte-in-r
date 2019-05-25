@@ -1,5 +1,7 @@
-title: Erste Schritte in R 
-description: Course description goes here.
+title: Erste Schritte in R
+description: >-
+  Dies ist ein Anfängerkurs für Einsteiger in R und Data Science Beginner.
+  Anhand von anschaulichen und einfachen Beispielen wird ein interaktiver
+  Einstieg für die Benutzer gewährt.
 programming_language: r
-from: "r-base-prod:v1.0.2"
-#from: "tidyverse-base-prod:v1.0.2"
+from: 'r-base-prod:v1.0.2'
