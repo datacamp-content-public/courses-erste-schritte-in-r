@@ -461,7 +461,7 @@ revenue.day <- c(2700, 3500, 4200, 4700, 5103, 3300)
 ```yaml
 type: NormalExercise
 key: 11c116d30a
-xp: 100
+xp: 35
 ```
 
 `@instructions`
@@ -488,4 +488,68 @@ open.vec <- c(1:6)
 ```{r}
 ex() %>% check_object("open.vec") %>% check_equal("c(1,2,3,4,5,6)", "c(1:6)", fixed=TRUE, missing_msg="So ist das nicht ganz richtig!")
 success_msg("Ja, genau!")
+```
+
+***
+
+```yaml
+type: NormalExercise
+key: bcb2167aa1
+xp: 35
+```
+
+`@instructions`
+- 2. In dem Vektor **sell.time** ist die Verkaufszeit für jeden Verkaufstag hinterlegt. Lassen Sie sich bitte die Informationen über Typ und Struktur des Vektors **sell.time** ausgeben. Beurteilen Sie bitte, ob dieser nur numerische Zahlen enthält und welcher Tag der zeitlich längste ist.
+
+`@hint`
+Die Funktion **str()** haben Sie in der Kontextbeschreibung gegeben.
+
+`@sample_code`
+```{r}
+#Verkaufszeit
+
+```
+
+`@solution`
+```{r}
+
+str(sell.time)
+```
+
+`@sct`
+```{r}
+ex() %>% check_code("str(sell.time)", fixed=TRUE, missing_msg="Verwenden Sie bitte die Funktionen aus der Kontextbeschreibung!") 
+success_msg("Ja, genau. Die Funktion str() ist sehr hilfreich und verschafft Ihnen einen guten Überblick über den Vektor. Es ist nützlich, den Befehl immer im Hinterkopf zu behalten!")
+```
+
+***
+
+```yaml
+type: NormalExercise
+key: 92d6aa8725
+xp: 30
+```
+
+`@instructions`
+- 3. Am Freitag wurden 5103 Euro Umsatz generiert. Wie viel wurde pro Stunde umgesetzt? Rechnen Sie es bitte aus.
+
+`@hint`
+Eine Divisionsaufgabe - denken Sie nicht kompliziert und tippen Sie es ein.
+
+`@sample_code`
+```{r}
+# Umsatz pro Stunde am Freitag:
+
+```
+
+`@solution`
+```{r}
+
+5103/9
+```
+
+`@sct`
+```{r}
+ex() %>% check_output(567, fixed=TRUE, missing_msg="Nicht richtig, da haben Sie sich verrechnet!")
+success_msg("Richtig. Am Freitag wurden 567€ Umsatz pro Stunde erwirtschaftet!")
 ```
