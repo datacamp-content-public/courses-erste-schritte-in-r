@@ -621,7 +621,7 @@ average.byday <- c(2700/8, 3500/8, 4200/8, 4700/8, 5103/9, 3300/6)
 ```yaml
 type: NormalExercise
 key: ab3f22fb95
-xp: 35
+xp: 25
 ```
 
 `@instructions`
@@ -655,7 +655,7 @@ success_msg("Ja, genau - Schauen Sie sich gern Ihre selbst erstellte Tabelle an!
 ```yaml
 type: NormalExercise
 key: 08550d114a
-xp: 35
+xp: 25
 ```
 
 `@instructions`
@@ -693,7 +693,7 @@ success_msg("Ja, genau - sonst wären falsche Umsatzzahlen an die Verkaufsnieder
 ```yaml
 type: NormalExercise
 key: cb0e656977
-xp: 30
+xp: 25
 ```
 
 `@instructions`
@@ -722,4 +722,51 @@ report.final <- rbind(sell.time, revenue.day, average.byday)
 ```{r}
 ex() %>% check_code(c("report.final <- rbind(sell.time, revenue.day, average.byday)","report.final <- rbind(report.weeksales, average.byday)"), fixed=TRUE, missing_msg= "Haben Sie den Vektor dem richtigen Teil der Tabelle zugewiesen? Verwenden Sie dazu bitte die Funktionen aus der Kontextbeschreibung!") 
 success_msg("Ja, genau - der final Report ist fast fertig!")
+```
+
+***
+
+```yaml
+type: NormalExercise
+key: 1a0c33c260
+xp: 25
+```
+
+`@instructions`
+Nun ist der Report für die Tochtergesellschaft schon fast fertig. Es fehlt noch eine eindeutige Benennung, damit dem Management der Tochtergesellschaft auf einen schnellen Blick ersichtlich ist, was dargestellt und analyisiert wurde. 
+
+- 4. Bitte benennen Sie bei dem erstellten finalen Report die Zeilen- und Spaltennamen:
+		- **Sales time in h, Revenue, Revenue per hour **
+        - **Monday, Tuesday, Wednesday, Thursday, Friday, Saturday**
+
+`@hint`
+Schauen Sie dazu in die Exercisebox. Die Beispiele verdeutlichen die notwendige Programmierung sehr gut. Achten Sie darauf, dass die Bennenungen Zeichenketten sind.
+
+`@sample_code`
+```{r}
+# report.weeksales
+report.weeksales <- rbind(sell.time, revenue.day)
+# Ausgabe + Änderung vornehmen
+print(report.weeksales)
+report.weeksales[1,2] <- 8
+# Vektor hinzufügen
+report.final <- rbind(sell.time, revenue.day, average.byday) 
+# Tabelle benennen
+
+
+```
+
+`@solution`
+```{r}
+# Zeilennamen benennen
+rownames(report.final) <- c("Sales time in h", "Revenue", "Revenue per hour")
+## Spaltennamen bennen
+#colnames(report.final) <- c("Monday","Tuesday", "Wednesday", "Thursday", "Friday", "Saturday")
+```
+
+`@sct`
+```{r}
+ex() %>% check_code(rownames(report.final) <- c("Sales time in h", "Revenue", "Revenue per hour"), fixed=TRUE, missing_msg="Haben Sie beachtet, dass die Benennungen Zeichenketten sind und dementsprechend gekennzeichnet werden müssen?") 
+success_msg("Ja, genau! So behalten Sie die Übersicht und auch andere können Ihre Ergebnisse leichter nachvollziehen!")
+ex() %>% check_code(colnames(report.final) <- c("Monday","Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"), fixed=TRUE, missing_msg=" Haben Sie alle Wochentage ohne Tippfehler und als Zeichenkette gekennzeichnet erstellt? Verwenden Sie bitte die Funktionen aus der Kontextbeschreibung") 
 ```
