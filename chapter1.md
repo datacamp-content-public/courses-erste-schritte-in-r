@@ -93,7 +93,7 @@ Behalten Sie diese Informationen im Hinterkopf und befolgen Sie sie in den nachf
 ```yaml
 type: NormalExercise
 key: 92cdd27ee5
-xp: 35
+xp: 25
 ```
 
 `@instructions`
@@ -131,7 +131,7 @@ success_msg("Ja, genau - der Umsatz im ersten Quartal beträgt 848000€!")
 ```yaml
 type: NormalExercise
 key: aa4dc628ea
-xp: 35
+xp: 25
 ```
 
 `@instructions`
@@ -163,7 +163,7 @@ success_msg("Richtig! Wir haben nun einen Umsatz in Q1 von 805200€")
 ```yaml
 type: NormalExercise
 key: d41c199018
-xp: 30
+xp: 25
 ```
 
 `@instructions`
@@ -186,5 +186,37 @@ Schauen Sie nochmal konkret auf Ihre Berechnung und überlegen Sie sich, wie Sie
 `@sct`
 ```{r}
 ex() %>% check_output("19", fixed=TRUE, missing_msg="Nicht ganz richtig - beachten Sie Tippfehler!")
+success_msg("Richtig und die nächste Aufgabe!")
+```
+
+***
+
+```yaml
+type: NormalExercise
+key: 1664766f3d
+xp: 25
+```
+
+`@instructions`
+- 4. Die Umsätze sollen in Q2 um 2.2% im Monat steigen. Welche Prognose geben Sie für die Umsatzzahlen am Ende des Q2 ab? Nehmen Sie den  Ausgangswert von 805200€ am Ende von Q1 an.
+
+`@hint`
+Beachten Sie, dass die Prozente jeweils im Monat steigen. Beachten Sie, dass in R anstatt dem Komma als Dezimaltrennzeichen der Punkt verwendet wird!
+
+`@sample_code`
+```{r}
+# Umsatzprognose Q2
+
+```
+
+`@solution`
+```{r}
+
+805200*(1.022^3)
+```
+
+`@sct`
+```{r}
+ex() %>% check_output(859520.9, fixed=TRUE, missing_msg="So ist das nicht ganz richtig - haben Sie den monatlichen Umsatzwachstum berechnet und beachtet, dass es sich um 3 Monate handelt?!")
 success_msg("Richtig und die nächste Aufgabe!")
 ```
