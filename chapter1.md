@@ -60,7 +60,7 @@ success_msg("So ihr erstes Programm ist vollendet!")
 
 ---
 
-## Insert exercise title here
+## Rechnen in R
 
 ```yaml
 type: TabExercise
