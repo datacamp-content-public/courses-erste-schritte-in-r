@@ -455,3 +455,37 @@ Wichtige Befehle:
 sell.time <- c(8,8,8,8,9,6)
 revenue.day <- c(2700, 3500, 4200, 4700, 5103, 3300)
 ```
+
+***
+
+```yaml
+type: NormalExercise
+key: 11c116d30a
+xp: 100
+```
+
+`@instructions`
+Sie sollen als Mitarbeiter der Business Intelligence & Data Analyticsabteilung erneut der kleinen Tochtergesellschaft zuarbeiten und analysieren dazu die Verkaufszeiten, den Umsatz pro Stunde und vergleichen diese auf Profitabilität.
+
+- 1. Erstellen Sie einen Vektor, der die Zahlen von 1 bis 6 beinhaltet und weisen Sie ihm bitte den Variablennamen **open.vec** zu. Die Zahlen stehen jeweils für einen Verkaufstag (1 = "Montag")
+
+`@hint`
+Schauen Sie bitte in die Exercisebox dort sind Beispiele gegeben.
+
+`@sample_code`
+```{r}
+# Verkaufstage
+
+```
+
+`@solution`
+```{r}
+
+open.vec <- c(1:6)
+```
+
+`@sct`
+```{r}
+ex() %>% check_object("open.vec") %>% check_equal("c(1,2,3,4,5,6)", "c(1:6)", fixed=TRUE, missing_msg="So ist das nicht ganz richtig!")
+success_msg("Ja, genau!")
+```
