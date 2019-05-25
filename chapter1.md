@@ -93,7 +93,7 @@ Behalten Sie diese Informationen im Hinterkopf und befolgen Sie sie in den nachf
 ```yaml
 type: NormalExercise
 key: 92cdd27ee5
-xp: 50
+xp: 35
 ```
 
 `@instructions`
@@ -131,7 +131,7 @@ success_msg("Ja, genau - der Umsatz im ersten Quartal beträgt 848000€!")
 ```yaml
 type: NormalExercise
 key: aa4dc628ea
-xp: 50
+xp: 35
 ```
 
 `@instructions`
@@ -156,4 +156,35 @@ Hier müssen Sie nur zwei Werte voneinander substrahieren.
 ```{r}
 ex() %>% check_output(805200, fixed=TRUE, missing_msg= "So ist das nicht richtig - beachten Sie Tippfehler!")
 success_msg("Richtig! Wir haben nun einen Umsatz in Q1 von 805200€")
+```
+
+***
+
+```yaml
+type: NormalExercise
+key: d41c199018
+xp: 30
+```
+
+`@instructions`
+- 3. Es sind auf den Umsatz von 295005€ im Januar eine Umsatzsteuer in Höhe von 56050.95€ aufgeschlagen worden. Wie viel Prozent an Umsatzsteuer wurden zur späteren Weitergabe an den Verbraucher aufgeschlagen, wenn die gesamte Steuer weitergegeben wurde? Geben Sie bitte das **Ergebnis in Prozent** aus!
+
+`@hint`
+Schauen Sie nochmal konkret auf Ihre Berechnung und überlegen Sie sich, wie Sie eine Verhältnisgleichung aufstellen. Es kann Ihnen helfen, an den Dreisatz aus Ihrer Schulzeit zu denken. Beachten Sie, dass in R anstatt dem Komma als Dezimaltrennzeichen der Punkt verwendet wird!
+
+`@sample_code`
+```{r}
+# Ausrechnen der Umsatzsteuer
+
+```
+
+`@solution`
+```{r}
+56050.95/(295005/100)
+```
+
+`@sct`
+```{r}
+ex() %>% check_output("19", fixed=TRUE, missing_msg="Nicht ganz richtig - beachten Sie Tippfehler!")
+success_msg("Richtig und die nächste Aufgabe!")
 ```
