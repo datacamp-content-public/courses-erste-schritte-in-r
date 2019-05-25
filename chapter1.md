@@ -585,3 +585,67 @@ mean(sell.time)
 ex() %>% check_output(7.833333, fixed=TRUE, missing_msg="Nicht ganz richtig!")
 success_msg("Richtig - die durchnittliche tägliche Verkaufszeit beträgt 7,83 h!")
 ```
+
+---
+
+## Matrizen
+
+```yaml
+type: TabExercise
+key: 2063bb6147
+xp: 100
+```
+
+Vektoren in eine Matrix zusammenführen: 
+- **rbind():** Funktion mit der Vektoren zu Zeilen ein und derselbe Matrix zusammengefügt werden können. *Matrix <- rbind(Vektor, Vektor)
+- **cbind():** Funktion mit der Vektoren als Spalten einer Matrix zusammengefügt werden.
+
+Werte einer Matrix ersetzen:
+- Um den Wert in der dritten Zeile und zweiten Spalte der Matrix zu 5 zu ändern: my.matrix[3,2] <- 5
+
+Zeilen- und Spaltennamen verändern: 
+- Zeilennamen verändern: Bsp. **rownames(Matrix)** <- c("Region", "Umsätze")
+- Spaltennamen verändern: Bsp. **colnames(Matrix)** <- c("Januar", "Februar")
+
+`@pre_exercise_code`
+```{r}
+report.weeksales <- matrix(1:18, ncol=6)
+report.final <- matrix(1:18, ncol=6)
+sell.time <- c(8,88,8,8,9,6)
+revenue.day <- c(2700, 3500, 4200, 4700, 5103, 3300)
+average.byday <- c(2700/8, 3500/8, 4200/8, 4700/8, 5103/9, 3300/6)
+```
+
+***
+
+```yaml
+type: NormalExercise
+key: ab3f22fb95
+xp: 100
+```
+
+`@instructions`
+Herr Müller bittet Sie einen Report mit dem Namen **report.weeksales** für die Tochterfirma zu erstellen.
+
+- 1. Ihre Aufgabe ist es eine Matrix (Tabelle) aus den Vektoren **sell.time und revenue.day** zu erstellen und der Variable vom Typ Matrix **report.weeksales** zuzuordnen. Schauen Sie, ob Sie es richtig gemacht haben mit der Ausgabe in der Console.
+
+`@hint`
+Schauen Sie bitte in die Exercisebox und verwenden Sie bitte die Funktion um Zeilenvektoren zusammen zu führen und verweisen (<-) Sie diese auf report.weeksales.
+
+`@sample_code`
+```{r}
+# report.weeksales
+
+```
+
+`@solution`
+```{r}
+
+report.weeksales <- rbind(sell.time, revenue.day)
+```
+
+`@sct`
+```{r}
+ex() %>% check_code(c("report.weeksales <- rbind(sell.time, revenue.day)", "rbind(sell.time, revenue.day) -> report.weeksales"), fixed=TRUE, missing_msg="Da stimmt etwas bei dem Erstellen der Matrix nicht. Verwenden Sie bitte die Funktionen aus der Kontextbeschreibung!") 
+success_msg("Ja, genau - Schauen Sie sich gern Ihre selbst erstellte Tabelle an!")
+```
