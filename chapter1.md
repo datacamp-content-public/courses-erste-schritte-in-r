@@ -770,3 +770,32 @@ ex() %>% check_code(rownames(report.final) <- c("Sales time in h", "Revenue", "R
 success_msg("Ja, genau! So behalten Sie die Übersicht und auch andere können Ihre Ergebnisse leichter nachvollziehen!")
 ex() %>% check_code(colnames(report.final) <- c("Monday","Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"), fixed=TRUE, missing_msg=" Haben Sie alle Wochentage ohne Tippfehler und als Zeichenkette gekennzeichnet erstellt? Verwenden Sie bitte die Funktionen aus der Kontextbeschreibung") 
 ```
+
+---
+
+## Wrap-Up? Haben Sie es vertanden?
+
+```yaml
+type: PureMultipleChoiceExercise
+key: 22c2d32180
+xp: 50
+```
+
+14 %% 3
+
+`@hint`
+Überlegen Sie doch einmal. In Kaptitel 2 Rechnen mit R haben wir es besprochen.
+
+`@possible_answers`
+- 5
+- 4
+- 3
+- [2]
+- 1
+
+`@feedback`
+- "Nein, da haben Sie etwas falsch verstanden"
+- "Nein, da liegen Sie nicht richtig"
+- "Nein, da liegen Sie nicht richtig"
+- "Super gemacht, 14 Modulo 3 ergibt 2"
+- "Nein, da liegen Sie nicht richtig"
