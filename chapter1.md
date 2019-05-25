@@ -621,7 +621,7 @@ average.byday <- c(2700/8, 3500/8, 4200/8, 4700/8, 5103/9, 3300/6)
 ```yaml
 type: NormalExercise
 key: ab3f22fb95
-xp: 50
+xp: 35
 ```
 
 `@instructions`
@@ -655,7 +655,7 @@ success_msg("Ja, genau - Schauen Sie sich gern Ihre selbst erstellte Tabelle an!
 ```yaml
 type: NormalExercise
 key: 08550d114a
-xp: 50
+xp: 35
 ```
 
 `@instructions`
@@ -686,4 +686,40 @@ report.weeksales[1,2] <- 8
 ```{r}
 ex() %>% check_code(c("report.weeksales[1,2] <- 8","8 -> report.weeksales[1,2]"), fixed=TRUE, missing_msg="Der Code für die Änderung des Wertes ist nicht korrekt! Haben Sie die richtige Indizierung zur Korrektur des Wertes ausgewählt?") 
 success_msg("Ja, genau - sonst wären falsche Umsatzzahlen an die Verkaufsniederlassung weitergegeben worden!")
+```
+
+***
+
+```yaml
+type: NormalExercise
+key: cb0e656977
+xp: 30
+```
+
+`@instructions`
+- 3. Sie hatten für Freitag schon den durchschnittlichen Umsatz pro Stunde ausgerechnet. In dem Vektor **average.byday** wurde der Umsatz pro Stunde für alle sechs Verkaufstage errechnet. Fügen Sie dem Report bitte die Information des Vektors hinzu, damit der Wochenreport vollständig ist und weisen Sie den neuen Report bitte der Variablen **report.final** zu.
+
+`@hint`
+Bitte einen weiteren Vektor average.byday der Matrix hinzufügen. Die Funktion rbind() hatten Sie bereits in Teil 1 dieser Aufgabe verwendet.
+
+`@sample_code`
+```{r}
+# report.weeksales
+report.weeksales <- rbind(sell.time, revenue.day)
+# Ausgabe + Änderung vornehmen
+print(report.weeksales)
+report.weeksales[1,2] <- 8
+# Vektor hinzufügen
+
+```
+
+`@solution`
+```{r}
+report.final <- rbind(sell.time, revenue.day, average.byday) 
+```
+
+`@sct`
+```{r}
+ex() %>% check_code(c("report.final <- rbind(sell.time, revenue.day, average.byday)","report.final <- rbind(report.weeksales, average.byday)"), fixed=TRUE, missing_msg= "Haben Sie den Vektor dem richtigen Teil der Tabelle zugewiesen? Verwenden Sie dazu bitte die Funktionen aus der Kontextbeschreibung!") 
+success_msg("Ja, genau - der final Report ist fast fertig!")
 ```
