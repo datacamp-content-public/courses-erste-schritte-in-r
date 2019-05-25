@@ -93,7 +93,7 @@ Behalten Sie diese Informationen im Hinterkopf und befolgen Sie sie in den nachf
 ```yaml
 type: NormalExercise
 key: 92cdd27ee5
-xp: 100
+xp: 50
 ```
 
 `@instructions`
@@ -124,4 +124,36 @@ Stellen Sie sicher, dass Sie die Summe aus 234000 + 320000 + 294000 in einer neu
 ```{r}
 ex() %>% check_output(848000, fixed=TRUE, missing_msg="Sie müssen sich verrechnet haben. Beachten Sie auch mögliche Tippfehler!")
 success_msg("Ja, genau - der Umsatz im ersten Quartal beträgt 848000€!")
+```
+
+***
+
+```yaml
+type: NormalExercise
+key: aa4dc628ea
+xp: 50
+```
+
+`@instructions`
+- 2. Sie hatten im Quartal Q1 einen Umsatz von 848000€ zuerst ausgegeben. Aufgrund eines Forderungsausfalles von 42800€ müssen diese am Umsatz berücksichtigt werden.
+
+`@hint`
+Hier müssen Sie nur zwei Werte voneinander substrahieren.
+
+`@sample_code`
+```{r}
+# Rückstellung berücksichtigen
+
+```
+
+`@solution`
+```{r}
+
+848000-42800
+```
+
+`@sct`
+```{r}
+ex() %>% check_output(805200, fixed=TRUE, missing_msg= "So ist das nicht richtig - beachten Sie Tippfehler!")
+success_msg("Richtig! Wir haben nun einen Umsatz in Q1 von 805200€")
 ```
