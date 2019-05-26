@@ -798,5 +798,5 @@ xp: 50
 - "Nein, da haben Sie etwas falsch verstanden"
 - "Nein, da liegen Sie nicht richtig"
 - "Nein, da liegen Sie nicht richtig"
-- "Super gemacht, 14 Modulo 3 ergibt 2"
+- "Super gemacht, 14 Modulo 3 ergibt 2" ![Glückwunsch](https://assets.datacamp.com/production/repositories/5050/datasets/9194e649dcb1fcbcdef15b71e344f1be3883fd18/Kurs%20Badge%202.jpg)
 - "Nein, da liegen Sie nicht richtig"
