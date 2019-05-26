@@ -785,7 +785,7 @@ xp: 50
 14 %% 3
 
 `@hint`
-Überlegen Sie doch einmal. In Kaptitel 2 Rechnen mit R haben wir es besprochen.
+Überlegen Sie doch einmal. In Kaptitel 2 'Rechnen mit R' haben wir es besprochen.
 
 `@possible_answers`
 - 5
