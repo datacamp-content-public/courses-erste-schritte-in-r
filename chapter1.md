@@ -1,6 +1,6 @@
 ---
-title: 'Chapter Title Here'
-description: 'Chapter description goes here.'
+title: 'Erste Schritte für einen interaktiven Beginn für R Starter und Data Science Neulinge'
+description: 'Mit diesem kurzen, anschaulichen Einstieg erhalten Sie einen leichten Einstieg in die Programmiersprache R. Er eignet sich für eine schnelle Auffrischung oder für Neulinge - fangt einfach an! Viel Spaß dabei.'
 free_preview: true
 ---
 
