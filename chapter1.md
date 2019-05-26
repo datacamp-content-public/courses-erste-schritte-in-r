@@ -371,7 +371,6 @@ Eine Zuweisung (<-) funktioniert mit diesem Zeichen in R. Weisen Sie der Variabl
 #1.numerische Variable?
 is.numeric(Anzahl_Mitarbeiter)
 #Den Befehl class(Anzahl_Mitarbeiter) können Sie auch verwenden. Er gibt direkt den Basisdatentyp aus.
-
 #2.Ausgabe + Zuweisung
 
 
@@ -381,7 +380,8 @@ is.numeric(Anzahl_Mitarbeiter)
 ```{r}
 #2.1 Ausgabe und ggf. neue Zuweisung
 print(Anzahl_Mitarbeiter)
-
+#Den Befehl class(Anzahl_Mitarbeiter) können Sie auch verwenden. Er gibt direkt den Basisdatentyp aus.
+#2.Ausgabe + Zuweisung
 Anzahl_Mitarbeiter <- 17
 ```
 
