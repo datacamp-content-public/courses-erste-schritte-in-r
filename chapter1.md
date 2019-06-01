@@ -715,7 +715,7 @@ report.final <- rbind(sell.time, revenue.day, average.byday)
 
 `@sct`
 ```{r}
-ex() %>% check_code(c("report.final <- rbind(sell.time, revenue.day, average.byday)","report.final <- rbind(report.weeksales, average.byday)", "report.final <- rbind(average.day, report.weeksales)"), fixed=TRUE, missing_msg= "Haben Sie den Vektor dem richtigen Teil der Tabelle zugewiesen? Verwenden Sie dazu bitte die Funktionen aus der Kontextbeschreibung!") 
+ex() %>% check_code(c("report.final <- rbind(sell.time, revenue.day, average.byday)","report.final <- rbind(report.weeksales, average.byday)", "report.final <- rbind(average.byday, report.weeksales)"), fixed=TRUE, missing_msg= "Haben Sie den Vektor dem richtigen Teil der Tabelle zugewiesen? Verwenden Sie dazu bitte die Funktionen aus der Kontextbeschreibung!") 
 success_msg("Ja, genau - der final Report ist fast fertig!")
 ```
 
