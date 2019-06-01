@@ -731,7 +731,8 @@ xp: 25
 Nun ist der Report für die Tochtergesellschaft schon fast fertig. Es fehlt noch eine eindeutige Benennung, damit dem Management der Tochtergesellschaft auf einen schnellen Blick ersichtlich ist, was dargestellt und analyisiert wurde. 
 
 - 4. Bitte benennen Sie bei dem erstellten finalen Report die Zeilen- und Spaltennamen:
-		- **Sales time in h, Revenue, Revenue per hour **
+		
+        - **Sales time in h, Revenue, Revenue per hour **
         - **Monday, Tuesday, Wednesday, Thursday, Friday, Saturday**
 
 `@hint`
