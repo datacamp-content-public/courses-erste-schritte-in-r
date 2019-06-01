@@ -254,7 +254,6 @@ Herr Müller bittet Sie sich mit den Quartalszahlen der letzten und aktuellen Qu
 
 1. Sie sollen nun die Quartalszahlen 2019 aus Q1: 805200€  und Q2: 859520.9€ den Variablen x und y zuordnen, um besser die Werte vergleichen zu können. 
 2. In der Variable z wurden die Quartalszahlen aus Q3 & Q4 bereits hinterlegt und zugewiesen. Ist es richtig, dass das letzte Halbjahr 2018 erfolgreicher war als das Halbjahr 2019 sich zu entwickeln scheint, wie Herr Müller vermutet?
-3. Berechnen Sie die Differenz aus den zwei Quartalen Q2 (Prognosewert 2019) und Q1 (2019) und weisen Sie Ihre Rechnung der Variablen **d** zu.
 
 `@hint`
 Schauen Sie bitte in die Exercisebox. Hier ist die Zuweisung anhand eines Beispiels verdeutlicht. Lesen Sie bitte genau die Instruktionen. Der Wert für Variable z wurde bereits zugewiesen.
@@ -272,8 +271,6 @@ z <- 1655000
 
 # 2.Vergleich der halbjährlichen Umsätze aus 2018 und 2019: 
 
-# 3.Verweisen Sie die Differenz aus Q2 (Prognosewert) und Q1 (2019) der Variable d zu:
-
 ```
 
 `@solution`
@@ -284,8 +281,6 @@ x <- 805200
 y <- 859520.9
 # 2.Vergleich der Umsätze
 z > (x+y)
-# 3.Verweisen Sie die Differenz aus Q2 und Q1 der Variable d zu:
-d <- (y-x)
 ```
 
 `@sct`
@@ -293,7 +288,6 @@ d <- (y-x)
 ex() %>% check_object("x") %>% check_equal(805200)
 ex() %>% check_object("y") %>% check_equal(859520.9)
 ex() %>% check_output("FALSE", fixed=TRUE, missing_msg= "Da haben Sie etwas falsch verglichen bei Aufgabe 2 oder die Aussage von Herrn Müller nicht direkt überprüft!")
-ex() %>% check_code(c("54320.9", "y-x", "859520.9-805200"), fixed=TRUE, missing_msg= "Da stimmt etwas bei Aufgabe 3. nicht!")
 success_msg("Ja, genau - es sieht so aus als hätten Sie die Variablenzuweisung verstanden und Herr Müller lag mit seiner Prognose falsch. Deshalb ist eine Überpüfung anhand von Daten für fundierte Aussagen und unternehmensrelevante Entscheidungen immer notwendig und wird in Zukunft weiter an Bedeutung zunehmen!")
 ```
 
